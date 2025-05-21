@@ -75,8 +75,8 @@ export default function index() {
           <Slider project={project} key={index} />
         ))}
       </motion.div>
-      <motion.div style={{ height }} className="relative">
-        <div className="h-[1550%] w-[120%] left-[-10%] rounded-[0_0_50%_50%] bg-white z-[1] absolute shadow-[0px_60px_50px_rgba(244,244,244.7)]"></div>
+      <motion.div style={{ height }} className="relative z-[5]">
+        <div className="h-[1550%] w-[120%] left-[-10%] rounded-[0_0_50%_50%] bg-white absolute z-[5] shadow-[0px_60px_50px_rgba(244,244,244.7)]"></div>
       </motion.div>
     </div>
   );

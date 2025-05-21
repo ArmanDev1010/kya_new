@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
-import Section from "../components/section";
+import Section from "../components/partners";
 import Courses from "../components/courses";
 
 export default function Home() {

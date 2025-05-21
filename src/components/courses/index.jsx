@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 
 import Section from "./Section";
+import TextFill from "./TextFill";
 
 import { scrollAnimations } from "./utils/smoothScroll";
 
@@ -110,7 +111,7 @@ export default function Index() {
 
   return (
     <div className="courses">
-      <div className=""></div>
+      <TextFill />
       <div className="">
         {sections.map((section, index) => (
           <Section key={index} {...section} />

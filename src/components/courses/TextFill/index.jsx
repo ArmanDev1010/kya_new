@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export default function index() {
   const containerRef = useRef(null);
@@ -44,11 +44,11 @@ export default function index() {
 
   return (
     <div
-      className="relative w-full h-[85vh] bg-[linear-gradient(#f4f4f4,#fcd5d7)]"
+      className="relative w-full h-[60vh] bg-[linear-gradient(#ffff,#FDDDDF)]"
       ref={containerRef}
     >
       <span
-        className="absolute bottom-0 left-0 mx-auto whitespace-nowrap text-center font-bold text-[#fccfd1] leading-[1.2] pointer-events-none"
+        className="absolute bottom-0 left-0 text-[#fcd5d7] mx-auto whitespace-nowrap text-center font-bold leading-[1] pointer-events-none"
         ref={textRef}
       >
         Our Courses

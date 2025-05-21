@@ -31,9 +31,9 @@ export default function index() {
         >
           +374 (098) 60 08 34
         </Link>
-        <button className="group font-[500] p-[12px_35px] border-[1px] relative cursor-pointer overflow-hidden ml-[28px] bg-white">
+        <button className="group font-[500] p-[12px_45px] border-[1px] relative cursor-pointer overflow-hidden ml-[28px] bg-white">
           <p
-            className="relative top-0 uppercase group-hover:top-[-40px]"
+            className="relative top-0 group-hover:top-[-40px]"
             style={{ transition: "top .4s cubic-bezier(.33,1,.68,1)" }}
           >
             Contact Us
@@ -42,9 +42,9 @@ export default function index() {
             className="w-full h-full absolute top-[110%] left-0 flex items-center justify-center group-hover:top-0"
             style={{ transition: "top .4s cubic-bezier(.33,1,.68,1)" }}
           >
-            <p className="absolute text-white uppercase">Contact Us</p>
+            <p className="absolute text-white">Contact Us</p>
             <div
-              className="bg-primary w-[60%] h-full rounded-[50%] group-hover:w-full group-hover:rounded-[0%]"
+              className="bg-primary w-full h-full"
               style={{ transition: "all .4s cubic-bezier(.33,1,.68,1)" }}
             ></div>
           </div>
