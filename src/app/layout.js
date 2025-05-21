@@ -1,9 +1,12 @@
 import "./globals.scss";
 
-import { Montserrat } from "next/font/google";
+import { Figtree } from 'next/font/google';
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
+const figtree = Figtree({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'], // Add other weights as needed
+  variable: '--font-figtree',
+  display: 'swap',
 });
 
 export const metadata = {
@@ -14,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={figtree.className}>{children}</body>
     </html>
   );
 }

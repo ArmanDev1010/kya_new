@@ -7,12 +7,12 @@ export default function index(props) {
       style={{ backgroundColor: props.project.color }}
     >
       <div className="relative w-[80%] h-[80%]">
-        <Image
+        {/* <Image
           src={`/images/${props.project.src}`}
           fill={true}
           alt=""
           className="object-cover"
-        />
+        /> */}
       </div>
     </div>
   );
