@@ -1,11 +1,38 @@
-import Left from "./Left";
-import Right from "./Right";
+"use client";
 
-export default function Index({ video, title, text, course, testimonials }) {
+import React, { useRef } from "react";
+
+import TextFill from "../TextFill";
+
+export default function Index({ video, course }) {
+  const containerRef = useRef(null);
+
   return (
-    <div className="course sticky top-0 h-screen overflow-hidden bg-white flex flex-[1_1_auto]">
-      <Left video={video} title={title} text={text} />
-      <Right course={course} testimonials={testimonials} />
+    <div className="course sticky top-0 h-screen overflow-hidden bg-white flex ">
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          src={`/assets/videos/${video}.mp4`}
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div
+        className="absolute z-[2] top-[5%] left-1/2 -translate-x-1/2 w-[80%] mx-auto text-white"
+        ref={containerRef}
+      >
+        <TextFill containerRef={containerRef} course={course} />
+        <div className="flex justify-center items-center gap-[30px] _1600:mt-[10px]">
+          <button className="relative inline-block _1600:px-20 _1600:py-5 _1280:px-16 _1280:py-4 border-2 border-white overflow-hidden group">
+            <span className="relative text-white font-semibold z-10 _1600:text-2xl _1280:text-xl">
+              Learn more
+            </span>
+            <span className="absolute -translate-y-full inset-0 bg-primary transition-transform duration-300 ease-[cubic-bezier(0.7,0,0.2,1)] group-hover:translate-y-0"></span>
+          </button>
+        </div>
+      </div>
+      <div className="absolute top-0 left-0 bg-black/50 w-full h-full z-[1]"></div>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Section from "./Section";
 import TextFill from "./TextFill";
@@ -9,7 +9,7 @@ import { scrollAnimations } from "./utils/smoothScroll";
 
 const sections = [
   {
-    course: "Business",
+    course: "Business from 0",
     video: "business",
     title: (
       <>
@@ -40,7 +40,7 @@ const sections = [
     ],
   },
   {
-    course: "Rights",
+    course: "Path to Law",
     video: "rights",
     title: (
       <>
@@ -105,13 +105,20 @@ const sections = [
 ];
 
 export default function Index() {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     scrollAnimations();
   }, []);
 
   return (
     <div className="courses">
-      <TextFill />
+      <div
+        className="relative w-full h-[40vh] bg-[linear-gradient(to_bottom,_#ffffff_0%,_#ffffff_60%,_#FDDDDF_100%)]"
+        ref={containerRef}
+      >
+        <TextFill containerRef={containerRef} coursetitle={true} />
+      </div>
       <div className="">
         {sections.map((section, index) => (
           <Section key={index} {...section} />

@@ -75,7 +75,7 @@ export default function index() {
         }}
         speed={1500}
         modules={[Autoplay]}
-        className="swiper_partner relative w-full h-full py-[30px] pointer-events-none"
+        className="swiper_partner relative w-full h-full py-[30px]"
       >
         {partners.map((text, key) => (
           <SwiperSlide key={key}>

@@ -2,8 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-export default function index() {
-  const containerRef = useRef(null);
+export default function index({ containerRef, coursetitle, course }) {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -42,17 +41,17 @@ export default function index() {
     text.style.fontSize = max + "px";
   };
 
+  const course_title =
+    "absolute bottom-0 left-0 text-[#fcd5d7] mx-auto whitespace-nowrap text-center font-bold leading-[1] pointer-events-none";
+  const course_name =
+    "mx-auto whitespace-nowrap text-center font-semibold leading-[1.2] pointer-events-none";
+
   return (
-    <div
-      className="relative w-full h-[60vh] bg-[linear-gradient(#ffff,#FDDDDF)]"
-      ref={containerRef}
+    <span
+      className={`${coursetitle ? course_title : course_name}`}
+      ref={textRef}
     >
-      <span
-        className="absolute bottom-0 left-0 text-[#fcd5d7] mx-auto whitespace-nowrap text-center font-bold leading-[1] pointer-events-none"
-        ref={textRef}
-      >
-        Our Courses
-      </span>
-    </div>
+      {coursetitle ? "Our Courses" : course}
+    </span>
   );
 }
