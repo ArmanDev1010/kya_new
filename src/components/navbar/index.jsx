@@ -29,7 +29,7 @@ export default function index() {
         >
           +374 (098) 60 08 34
         </Link>
-        <button className="group font-[500] p-[12px_45px] border-[1px] relative cursor-pointer overflow-hidden ml-[28px] bg-white">
+        <button className="group font-[500] p-[12px_55px] border-[1px] relative cursor-pointer overflow-hidden ml-[28px] bg-white">
           <p
             className="relative top-0 group-hover:top-[-40px]"
             style={{ transition: "top .4s cubic-bezier(.33,1,.68,1)" }}

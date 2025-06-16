@@ -1,10 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 
 export default function index() {
-  const containerRef = useRef(null);
   return (
     <div
       className="relative h-screen px-[3%] my-[30px] bg-cover bg-center bg-no-repeat"
@@ -25,15 +24,23 @@ export default function index() {
           </div>
           <Link
             href={"/"}
-            className="group mt-[1.5rem] max-w-[300px] border-[1px] rounded-full border-black cursor-pointer px-[58px] py-4 outline-none transition duration-200 hover:bg-secondary"
+            className="group text-[1.1vw] mt-[1.5rem] max-w-[300px] font-[600] px-[58px] py-4 border-[1px] border-black rounded-full relative cursor-pointer overflow-hidden"
           >
-            <div className="relative overflow-hidden text-center text-[1.1vw] font-[600]">
-              <div className="group-hover:translate-y-[-110%] transition duration-300">
-                View Points
-              </div>
-              <div className="text-white translate-y-[110%] group-hover:translate-y-[0%] transition duration-300 absolute top-0 bottom-0 left-0 right-0">
-                View Points
-              </div>
+            <p
+              className="relative text-center top-0 group-hover:top-[-40px]"
+              style={{ transition: "top .4s cubic-bezier(.33,1,.68,1)" }}
+            >
+              View Points
+            </p>
+            <div
+              className="w-full h-full absolute top-[110%] left-0 flex items-center justify-center group-hover:top-0"
+              style={{ transition: "top .4s cubic-bezier(.33,1,.68,1)" }}
+            >
+              <p className="absolute text-white">View Points</p>
+              <div
+                className="bg-primary w-[60%] h-full rounded-[50%] group-hover:w-full group-hover:rounded-[100px]"
+                style={{ transition: "all .4s cubic-bezier(.33,1,.68,1)" }}
+              ></div>
             </div>
           </Link>
         </div>
