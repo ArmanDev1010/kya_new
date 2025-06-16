@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-export default function index({ containerRef, coursetitle, course }) {
+export default function index({ containerRef, isTitle, title, course }) {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -48,10 +48,10 @@ export default function index({ containerRef, coursetitle, course }) {
 
   return (
     <span
-      className={`${coursetitle ? course_title : course_name}`}
+      className={`${isTitle ? course_title : course_name}`}
       ref={textRef}
     >
-      {coursetitle ? "Our Courses" : course}
+      {title ? title : course}
     </span>
   );
 }

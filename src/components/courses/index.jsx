@@ -117,7 +117,11 @@ export default function Index() {
         className="relative w-full h-[40vh] bg-[linear-gradient(to_bottom,_#ffffff_0%,_#ffffff_60%,_#FDDDDF_100%)]"
         ref={containerRef}
       >
-        <TextFill containerRef={containerRef} coursetitle={true} />
+        <TextFill
+          containerRef={containerRef}
+          title={"Our Courses"}
+          isTitle={true}
+        />
       </div>
       <div className="">
         {sections.map((section, index) => (
