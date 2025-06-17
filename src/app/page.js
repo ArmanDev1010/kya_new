@@ -3,6 +3,7 @@ import Hero from "../components/hero";
 import Section from "../components/partners";
 import Courses from "../components/courses";
 import Leadearboard from "../components/leaderboard";
+import Advantages from "../components/advantages";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
       <Section />
       <Courses />
       <Leadearboard />
+      <Advantages />
+      <div className="h-screen"></div>
     </div>
   );
 }

@@ -10,11 +10,17 @@ export default function index() {
       style={{ backgroundImage: `url(/assets/leaderboard/leaderboard.png)` }}
     >
       <div className="w-full flex justify-between">
-        <h2 className="text-[9vw] font-[600] leading-[1.2] text-[#d9d9d9] mix-blend-difference pointer-events-none">
+        <h2
+          className="font-[600] leading-[1.2] text-[#d9d9d9] mix-blend-difference pointer-events-none
+        _1600:text-[9vw] _1280:text-[8.5vw]"
+        >
           Leaderboard
         </h2>
-        <div className="relative z-[999999999999999999999] flex flex-col mt-[3rem]">
-          <div className="font-[500] self-end text-[1.3vw] leading-[1.4] tracking-[-0.02em] pointer-events-none">
+        <div className="relative z-[1] flex flex-col mt-[3rem]">
+          <div
+            className="font-[500] self-end leading-[1.4] tracking-[-0.02em] pointer-events-none 
+          _1600:text-[1.3vw] _1600:leading-[1.5] _1280:text-[1.35vw] _1280:leading-[1.5]"
+          >
             <p className="w-[32vw]">
               Track your child’s academic journey! Our leaderboard displays
               standout students in each class, reflecting their hard work,
@@ -24,7 +30,8 @@ export default function index() {
           </div>
           <Link
             href={"/"}
-            className="group text-[1.1vw] mt-[1.5rem] max-w-[300px] font-[600] px-[58px] py-4 border-[1px] border-black rounded-full relative cursor-pointer overflow-hidden"
+            className="group mt-[1.5rem] font-[600] border-[1px] border-black rounded-full relative cursor-pointer overflow-hidden
+            _1600:max-w-[320px] _1600:text-[1.1vw] _1600:py-4 _1280:max-w-[270px] _1280:text-[1.2vw] _1280:py-[14px]"
           >
             <p
               className="relative text-center top-0 group-hover:top-[-40px]"

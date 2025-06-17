@@ -36,8 +36,8 @@ const partners = [
 
 export default function index() {
   return (
-    <div className="partners relative z-[0] w-full h-[65vh] bg-[linear-gradient(#fce6e7,#ffff)]">
-      <div className="grid grid-cols-2 px-[3%] pt-[50px] pb-[65px]">
+    <div className="partners relative z-[0] w-full h-[65vh] bg-[linear-gradient(#fce6e7,#ffff)] mt-[60px]">
+      <div className="grid grid-cols-2 px-[3%] pt-[50px] pb-[65px] pointer-events-none">
         <h2 className="text-[4.5vw] font-[500]">Our Partners</h2>
         <div className="">
           <div className="text-[1.3vw] leading-[1.2] tracking-[-0.04em] mt-[1rem] mb-[1.5rem]">

@@ -108,7 +108,9 @@ export default function Index() {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    scrollAnimations();
+    if (typeof window !== "undefined") {
+      scrollAnimations();
+    }
   }, []);
 
   return (

@@ -25,7 +25,7 @@ export default function Index({ video, course }) {
         <TextFill containerRef={containerRef} course={course} />
         <div className="flex justify-center items-center gap-[30px] _1600:mt-[10px]">
           <button className="group relative inline-block _1600:px-28 _1600:py-5 _1280:px-20 _1280:py-4 border-2 border-white overflow-hidden">
-            <div className="relative overflow-hidden text-white font-semibold z-10 _1600:text-2xl _1280:text-xl">
+            <div className="relative overflow-hidden text-white font-semibold z-10 _1600:text-[26px] _1280:text-xl">
               <div className="group-hover:translate-y-[-110%] transition duration-300">
                 Learn more
               </div>
