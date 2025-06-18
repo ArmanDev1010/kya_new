@@ -4,6 +4,7 @@ import Section from "../components/partners";
 import Courses from "../components/courses";
 import Leadearboard from "../components/leaderboard";
 import Advantages from "../components/advantages";
+import Team from "../components/team";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Courses />
       <Leadearboard />
       <Advantages />
-      
+      <Team />
     </div>
   );
 }
