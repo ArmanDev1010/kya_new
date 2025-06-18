@@ -48,12 +48,12 @@ export default function Home() {
                 ></div>
               </div>
               <div className="title relative z-10 text-white pt-[60px] px-[80px] pointer-events-none">
-                <h2 className="font-[700] text-[5vw] uppercase">
+                <h2 className="font-[700] text-[6vw] uppercase">
                   {text.title}
                 </h2>
                 <div
                   className="font-[400] tracking-[-0.02em] pointer-events-none 
-          _1600:text-[1.2vw] _1600:leading-[1.5]"
+          _1600:text-[1.3vw] _1600:leading-[1.5]"
                 >
                   <p className="w-[40vw]">{text.paragraph}</p>
                 </div>

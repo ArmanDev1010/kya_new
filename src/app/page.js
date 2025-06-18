@@ -14,7 +14,7 @@ export default function Home() {
       <Courses />
       <Leadearboard />
       <Advantages />
-      <div className="h-screen"></div>
+      
     </div>
   );
 }

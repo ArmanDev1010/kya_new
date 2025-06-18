@@ -1,22 +1,17 @@
-"use client";
-
 import Link from "next/link";
 import React from "react";
 
 export default function index() {
   return (
-    <div
-      className="relative h-screen px-[3%] my-[30px] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(/assets/leaderboard/leaderboard.png)` }}
-    >
-      <div className="w-full flex justify-between">
+    <div className="relative mb-[30px] px-[3%]">
+      <div className="relative w-full flex justify-between">
         <h2
           className="font-[600] leading-[1.2] text-[#d9d9d9] mix-blend-difference pointer-events-none
         _1600:text-[9vw] _1280:text-[8.5vw]"
         >
           Leaderboard
         </h2>
-        <div className="relative z-[1] flex flex-col mt-[3rem]">
+        <div className="absolute top-[2.5em] right-0 z-[1] flex flex-col">
           <div
             className="font-[500] self-end leading-[1.4] tracking-[-0.02em] pointer-events-none 
           _1600:text-[1.3vw] _1600:leading-[1.5] _1280:text-[1.35vw] _1280:leading-[1.5]"
@@ -52,6 +47,12 @@ export default function index() {
           </Link>
         </div>
       </div>
+      <div
+        className="relative aspect-[60/31] w-full top-0 left-1/2 -translate-x-1/2 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(/assets/leaderboard/leaderboard.png)`,
+        }}
+      ></div>
     </div>
   );
 }
