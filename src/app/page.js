@@ -5,6 +5,7 @@ import Courses from "../components/courses";
 import Leadearboard from "../components/leaderboard";
 import Advantages from "../components/advantages";
 import Team from "../components/team";
+import Footer from "../components/footer"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Leadearboard />
       <Advantages />
       <Team />
+      <Footer />
     </div>
   );
 }

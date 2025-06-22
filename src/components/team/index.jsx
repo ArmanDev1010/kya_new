@@ -78,11 +78,11 @@ export default function TeamSection() {
                 let scrollOffsetEnd = 0;
 
                 if (columnIndex === 1) {
-                  scrollOffset = 75;
-                  scrollOffsetEnd = -20;
+                  scrollOffset = 95;
+                  scrollOffsetEnd = -30;
                 } else if (columnIndex === 2) {
-                  scrollOffset = 150;
-                  scrollOffsetEnd = -40;
+                  scrollOffset = 190;
+                  scrollOffsetEnd = -60;
                 }
 
                 const y = useTransform(

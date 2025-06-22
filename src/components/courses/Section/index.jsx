@@ -1,14 +1,10 @@
-"use client";
+import React from "react";
 
-import React, { useRef } from "react";
-
-import TextFill from "../TextFill";
+import TextFill from "../../../common/TextFill";
 
 export default function Index({ video, course }) {
-  const containerRef = useRef(null);
-
   return (
-    <div className="course sticky top-0 h-screen overflow-hidden bg-white flex ">
+    <div className="course sticky top-0 h-screen overflow-hidden bg-white flex">
       <div className="absolute top-0 left-0 w-full h-full">
         <video
           src={`/assets/videos/${video}.mp4`}
@@ -18,12 +14,9 @@ export default function Index({ video, course }) {
           className="w-full h-full object-cover"
         />
       </div>
-      <div
-        className="absolute z-[2] top-[5%] left-1/2 -translate-x-1/2 w-[80%] mx-auto text-white"
-        ref={containerRef}
-      >
-        <TextFill containerRef={containerRef} course={course} />
-        <div className="flex justify-center items-center gap-[30px] _1600:mt-[10px]">
+      <div className="absolute z-[2] top-[5%] left-1/2 -translate-x-1/2 w-[80%] mx-auto text-white">
+        <TextFill course={course} />
+        <div className="flex justify-center items-center gap-[30px] mt-10">
           <button className="group relative inline-block _1600:px-28 _1600:py-5 _1280:px-20 _1280:py-4 border-2 border-white overflow-hidden">
             <div className="relative overflow-hidden text-white font-semibold z-10 _1600:text-[26px] _1280:text-xl">
               <div className="group-hover:translate-y-[-110%] transition duration-300">

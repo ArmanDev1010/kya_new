@@ -2,7 +2,8 @@
 
 import React, { useEffect, useRef } from "react";
 
-export default function index({ containerRef, isTitle, title, course }) {
+export default function index({ isTitle, title, course }) {
+  const containerRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -41,17 +42,25 @@ export default function index({ containerRef, isTitle, title, course }) {
     text.style.fontSize = max + "px";
   };
 
-  const course_title =
-    "absolute bottom-0 left-0 text-[#fcd5d7] mx-auto whitespace-nowrap text-center font-bold leading-[1] pointer-events-none";
-  const course_name =
-    "mx-auto whitespace-nowrap text-center font-semibold leading-[1.2] pointer-events-none";
-
   return (
-    <span
-      className={`${isTitle ? course_title : course_name}`}
-      ref={textRef}
-    >
-      {title ? title : course}
-    </span>
+    <div ref={containerRef} className="w-full h-full">
+      <span
+        className="mx-auto whitespace-nowrap text-center pointer-events-none leading-[1]"
+        style={
+          isTitle
+            ? {
+                position: "absolute",
+                bottom: "0",
+                left: "0",
+                color: "#fcd5d7",
+                fontWeight: "bold",
+              }
+            : { fontWeight: "500" }
+        }
+        ref={textRef}
+      >
+        {title ? title : course}
+      </span>
+    </div>
   );
 }
