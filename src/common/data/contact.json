@@ -1,0 +1,27 @@
+[
+  {
+    "type": "address",
+    "values": [
+      {
+        "label": "Azatutyan 24/15",
+        "href": "https://maps.app.goo.gl/kxqqfUg8Rt7yt7Vn9"
+      }
+    ]
+  },
+  {
+    "type": "phone",
+    "values": [
+      { "label": "+374 98 600 834", "href": "tel:+37498600834" },
+      { "label": "+374 55 500 533", "href": "tel:+37455500533" }
+    ]
+  },
+  {
+    "type": "email",
+    "values": [
+      {
+        "label": "info.kyacademy@gmail.com",
+        "href": "mailto:info.kyacademy@gmail.com"
+      }
+    ]
+  }
+]

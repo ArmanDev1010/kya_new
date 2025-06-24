@@ -7,7 +7,7 @@ import TextFill from "../../common/TextFill";
 
 import { scrollAnimations } from "./utils/smoothScroll";
 
-import coursesData from "../data/courses.json";
+import coursesData from "../../common/data/courses.json";
 
 export default function Index() {
   useEffect(() => {

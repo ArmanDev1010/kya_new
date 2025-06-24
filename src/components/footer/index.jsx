@@ -1,8 +1,10 @@
 import Link from "next/link";
 import React from "react";
 
-import coursesData from "../data/courses.json";
-import socialsData from "../data/socials.json";
+import coursesData from "../../common/data/courses.json";
+import socialsData from "../../common/data/socials.json";
+import links from "../../common/data/links.json";
+import contactInfo from "../../common/data/contact.json";
 
 import TextFill from "../../common/TextFill";
 
@@ -10,34 +12,6 @@ import logo from "../../../public/assets/logos/logo.png";
 import Image from "next/image";
 
 export default function index() {
-  const contactInfo = [
-    {
-      type: "address",
-      values: [
-        {
-          label: "Azatutyan 24/15",
-          href: "https://maps.app.goo.gl/kxqqfUg8Rt7yt7Vn9",
-        },
-      ],
-    },
-    {
-      type: "phone",
-      values: [
-        { label: "+374 98 600 834", href: "tel:+37498600834" },
-        { label: "+374 55 500 533", href: "tel:+37455500533" },
-      ],
-    },
-    {
-      type: "email",
-      values: [
-        {
-          label: "info.kyacademy@gmail.com",
-          href: "mailto:info.kyacademy@gmail.com",
-        },
-      ],
-    },
-  ];
-
   return (
     <footer className="relative mt-20 pt-10 pb-[24px] bg-[linear-gradient(#ffff,#fcd5d7)]">
       <div className="flex px-[3%] mb-10">
@@ -76,10 +50,15 @@ export default function index() {
           </ul>
         </div>
         <ul className="flex flex-col gap-5 text-xl capitalize">
-          {["home", "about us", "courses", "leaderboard"].map((text, key) => (
+          {links.map((text, key) => (
             <li key={key}>
-              <Link href={`./${text}`} className="line_hover_effect">
-                {text}
+              <Link
+                href={`/${
+                  text.href ? text.href : text.link.split(" ")[0].toLowerCase()
+                }`}
+                className="line_hover_effect"
+              >
+                {text.link}
               </Link>
             </li>
           ))}

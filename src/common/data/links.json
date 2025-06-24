@@ -1,0 +1,21 @@
+[
+  {
+    "link": "home",
+    "href": "/"
+  },
+  {
+    "link": "about us",
+    "main_header": true
+  },
+  {
+    "link": "courses",
+    "main_header": true
+  },
+  {
+    "link": "leaderboard",
+    "main_header": true
+  },
+  {
+    "link": "contact us"
+  }
+]

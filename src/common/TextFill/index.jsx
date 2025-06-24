@@ -54,8 +54,9 @@ export default function index({ isTitle, title, course }) {
                 left: "0",
                 color: "#fcd5d7",
                 fontWeight: "bold",
+                lineHeight: "1",
               }
-            : { fontWeight: "500" }
+            : { fontWeight: "500", lineHeight: "1" }
         }
         ref={textRef}
       >
