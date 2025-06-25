@@ -42,7 +42,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
 
-  // Large vs Small styling
   const isLarge = scrollY <= 50;
 
   return (
@@ -60,7 +59,7 @@ export default function Header() {
             }`}
           >
             <div
-              className={`flex items-center justify-between px-[64px] max-_1080:!px-[5%] transition-all duration-300 ${
+              className={`flex items-center justify-between px-[3%] max-_1080:!px-[5%] transition-all duration-300 ${
                 isLarge ? "h-[120px]" : "h-[65px]"
               }`}
             >
@@ -76,7 +75,7 @@ export default function Header() {
 
               <ul
                 className={`absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center max-_1440:hidden ${
-                  isLarge ? "gap-14" : "gap-10"
+                  isLarge ? "gap-14" : "gap-12"
                 }`}
               >
                 {links.map(
@@ -107,9 +106,7 @@ export default function Header() {
               >
                 <Link
                   href={"tel:+37498600834"}
-                  className={`cursor-pointer hover:opacity-70 transition duration-300 ${
-                    isLarge ? "text-[15px]" : "text-[14px]"
-                  }`}
+                  className="text-[15px] cursor-pointer hover:opacity-70 transition duration-300"
                 >
                   +374 (098) 60 08 34
                 </Link>
@@ -148,6 +145,8 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <div className="h-[120px]"></div>
 
       <AnimatePresence mode="wait">
         {isActive && <Nav isActive={isActive} setIsActive={setIsActive} />}
