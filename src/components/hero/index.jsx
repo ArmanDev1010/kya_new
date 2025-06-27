@@ -105,7 +105,7 @@ export default function index() {
             <li
               key={key}
               ref={plane}
-              className={`absolute z-[1] p-1 text-[0.9vw]`}
+              className={`absolute z-[1] p-1 text-[0.9vw] pointer-events-none`}
               style={{
                 backgroundColor: `${bg}`,
                 right: `${right}vw`,

@@ -7,7 +7,7 @@ import Link from "next/link";
 import links from "../../../common/data/links.json";
 import contactInfo from "../../../common/data/contact.json";
 
-import Rounded from "../RoundedButton";
+import RoundedBtn from "../RoundedButton";
 
 export default function index({ setIsActive, isActive }) {
   return (
@@ -70,17 +70,14 @@ export default function index({ setIsActive, isActive }) {
             )}
           </ul>
         </div>
-        <Rounded
+        <RoundedBtn
+          menu={true}
           setIsActive={setIsActive}
           isActive={isActive}
           style={{
-            overflow: "hidden",
             position: "absolute",
-            top: "20px",
-            right: "20px",
-            width: "80px",
-            height: "80px",
-            background: "transparent",
+            top: "30px",
+            right: "30px",
           }}
         />
       </div>

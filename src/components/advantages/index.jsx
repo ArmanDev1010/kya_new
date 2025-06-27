@@ -52,8 +52,7 @@ export default function Home() {
                   {text.title}
                 </h2>
                 <div
-                  className="font-[400] tracking-[-0.02em] pointer-events-none 
-          _1600:text-[1.3vw] _1600:leading-[1.5]"
+                  className="font-[400] tracking-[-0.02em] pointer-events-none text-[1.3vw] _1600:leading-[1.5]"
                 >
                   <p className="w-[40vw]">{text.paragraph}</p>
                 </div>

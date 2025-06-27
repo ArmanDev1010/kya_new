@@ -1,12 +1,15 @@
 import "./globals.scss";
 
-import { Figtree } from 'next/font/google';
+import { Figtree } from "next/font/google";
+
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 const figtree = Figtree({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'], // Add other weights as needed
-  variable: '--font-figtree',
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-figtree",
+  display: "swap",
 });
 
 export const metadata = {
@@ -17,7 +20,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={figtree.className}>{children}</body>
+      <body className={figtree.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

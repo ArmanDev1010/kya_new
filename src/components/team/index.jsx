@@ -97,7 +97,8 @@ export default function TeamSection() {
                     className="group relative border-t-[1px] border-t-black cursor-pointer"
                     style={{ y }}
                   >
-                    <p className="capitalize text-[1.1vw] text-ellipsis whitespace-nowrap overflow-hidden my-[2.5vw] pointer-events-none">
+                    <p className="capitalize text-[1.1vw] text-ellipsis whitespace-nowrap overflow-hidden my-[2.5vw] pointer-events-none
+                    max-_1600:text-[1.2vw]">
                       <span>{member.name}</span> • <span>{member.role}</span>
                     </p>
                     <div className="relative aspect-[420/420] w-full bg-gray-50">

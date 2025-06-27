@@ -1,14 +1,17 @@
 [
   {
-    "course": "Business from 0",
+    "course": "business",
+    "title": "Business from 0",
     "video": "business"
   },
   {
-    "course": "Path to Law",
+    "course": "rights",
+    "title": "Path to Law",
     "video": "rights"
   },
   {
-    "course": "Marketing",
+    "course": "marketing",
+    "title": "Marketing",
     "video": "marketing"
   }
 ]
