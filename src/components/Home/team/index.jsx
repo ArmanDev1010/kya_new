@@ -13,7 +13,7 @@ import {
   mane_mood,
   samvel_trainer,
   susanna_trainer,
-} from "../../../public/assets";
+} from "../../../../public/assets";
 
 export default function TeamSection() {
   const allMembers = [

@@ -3,11 +3,11 @@
 import { useEffect } from "react";
 
 import Section from "./Section";
-import TextFill from "../../common/TextFill";
+import TextFill from "../../../common/TextFill";
 
 import { scrollAnimations } from "./utils/smoothScroll";
 
-import coursesData from "../../common/data/courses.json";
+import coursesData from "../../../common/data/courses.json";
 
 export default function Index() {
   useEffect(() => {

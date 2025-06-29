@@ -42,7 +42,10 @@ export default function index() {
           <ul className="flex flex-col gap-5 text-xl capitalize">
             {coursesData.map((text, key) => (
               <li key={key}>
-                <Link href={`/courses/${text.course}`} className="line_hover_effect">
+                <Link
+                  href={`/courses/${text.course}`}
+                  className="line_hover_effect"
+                >
                   {text.title}
                 </Link>
               </li>

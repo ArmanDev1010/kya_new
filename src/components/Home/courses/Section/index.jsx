@@ -1,6 +1,6 @@
 import React from "react";
 
-import TextFill from "../../../common/TextFill";
+import TextFill from "../../../../common/TextFill";
 import Link from "next/link";
 
 export default function Index({ video, title, course }) {

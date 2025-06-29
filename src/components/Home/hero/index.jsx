@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 
 import SlidingImages from "./SlidingImages";
-import TextFill from "../../common/TextFill";
+import TextFill from "../../../common/TextFill";
 
 export default function index() {
   const plane1 = useRef(null);

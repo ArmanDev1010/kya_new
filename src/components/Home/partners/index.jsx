@@ -18,7 +18,7 @@ import {
   ucom,
   viva,
   park,
-} from "../../../public/assets";
+} from "../../../../public/assets";
 import Link from "next/link";
 
 const partners = [

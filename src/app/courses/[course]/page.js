@@ -1,3 +1,5 @@
+import Cards from "../../../components/Course/cards";
+
 import courseData from "../../../common/data/courses.json";
 
 export async function generateStaticParams() {
@@ -8,8 +10,8 @@ export default async function Course({ params }) {
   const { course } = await params;
 
   return (
-    <div className="relative h-screen">
-      <p>{course}</p>
+    <div className="relative">
+      <Cards />
     </div>
   );
 }
