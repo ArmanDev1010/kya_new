@@ -50,7 +50,7 @@ export default function index() {
       <div
         className="relative aspect-[60/31] w-full top-0 left-1/2 -translate-x-1/2 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(/assets/leaderboard/leaderboard.png)`,
+          backgroundImage: `url(/assets/home/leaderboard.png)`,
         }}
       ></div>
     </div>

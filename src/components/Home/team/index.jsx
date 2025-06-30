@@ -47,7 +47,7 @@ export default function TeamSection() {
   const columnsPerRow = 3;
 
   return (
-    <div className="relative px-[3%] mb-[30px]">
+    <div className="relative px-[3%] mb-20">
       <h2 className="text-right text-[6vw] font-[500] pointer-events-none pr-[10vw] mb-[50px]">
         Our Team
       </h2>

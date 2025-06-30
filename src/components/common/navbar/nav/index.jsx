@@ -4,8 +4,8 @@ import { menuSlide } from "./animation";
 import Curve from "./Curve";
 import Link from "next/link";
 
-import links from "../../../common/data/links.json";
-import contactInfo from "../../../common/data/contact.json";
+import links from "../../../../common/data/links.json";
+import contactInfo from "../../../../common/data/contact.json";
 
 import RoundedBtn from "../RoundedButton";
 

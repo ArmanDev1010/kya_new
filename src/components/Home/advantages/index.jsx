@@ -43,7 +43,7 @@ export default function Home() {
                 <div
                   className="slide_img absolute w-full h-full bg-cover bg-center bg-no-repeat"
                   style={{
-                    backgroundImage: `url(/assets/advantages/${text.title.toLowerCase()}.jpg)`,
+                    backgroundImage: `url(/assets/home/advantages/${text.title.toLowerCase()}.jpg)`,
                   }}
                 ></div>
               </div>

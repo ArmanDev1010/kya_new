@@ -1,23 +1,23 @@
-import bp from "./partners/1.png";
-import brandon from "./partners/2.png";
-import central from "./partners/3.png";
-import coke from "./partners/4.png";
-import digitain from "./partners/5.png";
-import mindcenter from "./partners/6.png";
-import stamina from "./partners/7.png";
-import ucom from "./partners/8.png";
-import viva from "./partners/9.png";
-import park from "./partners/10.png";
+import bp from "./home/partners/1.png";
+import brandon from "./home/partners/2.png";
+import central from "./home/partners/3.png";
+import coke from "./home/partners/4.png";
+import digitain from "./home/partners/5.png";
+import mindcenter from "./home/partners/6.png";
+import stamina from "./home/partners/7.png";
+import ucom from "./home/partners/8.png";
+import viva from "./home/partners/9.png";
+import park from "./home/partners/10.png";
 
-import lilit_founder from "./team/lilit_founder.png";
-import garegin_director from "./team/garegin_director.png";
-import arman_trainer from "./team/arman_trainer.png";
-import samvel_trainer from "./team/samvel_trainer.png";
-import susanna_trainer from "./team/susanna_trainer.png";
-import armans_trainer from "./team/armans_trainer.png";
-import lilit_smm from "./team/lilit_smm.png";
-import anahit_communication from "./team/anahit_communication.png";
-import mane_mood from "./team/mane_mood.png";
+import lilit_founder from "./home/team/lilit_founder.png";
+import garegin_director from "./home/team/garegin_director.png";
+import arman_trainer from "./home/team/arman_trainer.png";
+import samvel_trainer from "./home/team/samvel_trainer.png";
+import susanna_trainer from "./home/team/susanna_trainer.png";
+import armans_trainer from "./home/team/armans_trainer.png";
+import lilit_smm from "./home/team/lilit_smm.png";
+import anahit_communication from "./home/team/anahit_communication.png";
+import mane_mood from "./home/team/mane_mood.png";
 
 export {
   //team

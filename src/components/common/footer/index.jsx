@@ -1,19 +1,19 @@
 import Link from "next/link";
 import React from "react";
 
-import coursesData from "../../common/data/courses.json";
-import socialsData from "../../common/data/socials.json";
-import links from "../../common/data/links.json";
-import contactInfo from "../../common/data/contact.json";
+import coursesData from "../../../common/data/courses.json";
+import socialsData from "../../../common/data/socials.json";
+import links from "../../../common/data/links.json";
+import contactInfo from "../../../common/data/contact.json";
 
-import TextFill from "../../common/TextFill";
+import TextFill from "../../../common/TextFill";
 
-import logo from "../../../public/assets/logos/logo.png";
+import logo from "../../../../public/assets/logos/logo.png";
 import Image from "next/image";
 
 export default function index() {
   return (
-    <footer className="relative mt-20 pt-10 pb-[24px] bg-[linear-gradient(#ffff,#fcd5d7)]">
+    <footer className="relative pt-10 pb-[24px] bg-[linear-gradient(#ffff,#fcd5d7)]">
       <div className="flex px-[3%] mb-10">
         <ul className="flex flex-col gap-[36px] flex-[0_0_24vw]">
           {contactInfo.map(({ type, values }, key) => (

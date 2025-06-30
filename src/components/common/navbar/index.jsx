@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
-import Black_Logo from "../../../public/assets/logos/black_text_logo.png";
-import Logo from "../../../public/assets/logos/logo.png";
+import Black_Logo from "../../../../public/assets/logos/black_text_logo.png";
+import Logo from "../../../../public/assets/logos/logo.png";
 
 import RoundedBtn from "./RoundedButton";
 import Nav from "./nav";
 
-import links from "../../common/data/links.json";
+import links from "../../../common/data/links.json";
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0);
