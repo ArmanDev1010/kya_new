@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-export default function index({ isTitle, title, course }) {
+export default function index({ isTitle, title }) {
   const containerRef = useRef(null);
   const textRef = useRef(null);
 
@@ -56,11 +56,11 @@ export default function index({ isTitle, title, course }) {
                 fontWeight: "bold",
                 lineHeight: "1",
               }
-            : { fontWeight: "500", lineHeight: "1" }
+            : { lineHeight: "1" }
         }
         ref={textRef}
       >
-        {title ? title : course}
+        {title}
       </span>
     </div>
   );

@@ -2,16 +2,19 @@
   {
     "course": "business",
     "title": "Business from 0",
-    "video": "business"
+    "description": "Build your business from 0 — Find a problem, create a solution, and pitch your idea to investors.",
+    "color": "#1FBDAF"
   },
   {
     "course": "rights",
     "title": "Path to Law",
-    "video": "rights"
+    "description": "Explore legal systems, debate real cases, and understand how laws shape society and protect rights.",
+    "color": "#F36967"
   },
   {
     "course": "marketing",
     "title": "Marketing",
-    "video": "marketing"
+    "description": "Learn how to brand, target audiences, and create impactful campaigns using digital tools and creativity.",
+    "color": "#FED501"
   }
 ]

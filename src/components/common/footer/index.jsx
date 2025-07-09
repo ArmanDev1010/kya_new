@@ -6,7 +6,7 @@ import socialsData from "../../../common/data/socials.json";
 import links from "../../../common/data/links.json";
 import contactInfo from "../../../common/data/contact.json";
 
-import TextFill from "../../../common/TextFill";
+import TextFill from "../TextFill";
 
 import logo from "../../../../public/assets/logos/logo.png";
 import Image from "next/image";

@@ -67,7 +67,7 @@ export const scrollAnimations = () => {
   ScrollTrigger.create({
     trigger: stickySection,
     start: "top top",
-    end: `+=${stickyHeight}px`,
+    end: `+=${stickyHeight}em`,
     scrub: 1,
     pin: true,
     pinSpacing: true,

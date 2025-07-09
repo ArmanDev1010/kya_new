@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 import Section from "./Section";
-import TextFill from "../../../common/TextFill";
+import TextFill from "../../common/TextFill";
 
 import { scrollAnimations } from "./utils/smoothScroll";
 

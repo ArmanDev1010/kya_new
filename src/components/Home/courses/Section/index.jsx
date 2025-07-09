@@ -1,14 +1,14 @@
 import React from "react";
 
-import TextFill from "../../../../common/TextFill";
+import TextFill from "../../../common/TextFill";
 import Link from "next/link";
 
-export default function Index({ video, title, course }) {
+export default function Index({ course, title }) {
   return (
     <div className="course sticky top-0 h-screen overflow-hidden bg-white flex">
       <div className="absolute top-0 left-0 w-full h-full">
         <video
-          src={`/assets/videos/${video}.mp4`}
+          src={`/assets/videos/${course}.mp4`}
           autoPlay
           loop
           muted
@@ -16,7 +16,9 @@ export default function Index({ video, title, course }) {
         />
       </div>
       <div className="absolute z-[2] top-[5%] left-1/2 -translate-x-1/2 w-[80%] mx-auto text-white">
-        <TextFill course={title} />
+        <div className="font-[500]">
+          <TextFill title={title} />
+        </div>
         <div className="flex justify-center mt-10">
           <Link href={`/courses/${course}`}>
             <button className="group relative inline-block _1600:px-28 _1600:py-5 _1280:px-20 _1280:py-4 border-2 border-white overflow-hidden">

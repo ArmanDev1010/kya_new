@@ -102,3 +102,29 @@ body {
     width: 0%;
   }
 }
+
+.smooth_parallax {
+  .column {
+    &:nth-of-type(1) {
+      top: -65%;
+    }
+    &:nth-of-type(2) {
+      top: -135%;
+    }
+    &:nth-of-type(3) {
+      top: -80%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .column {
+      &:nth-of-type(1) {
+        top: -75%;
+        left: -35%;
+      }
+      &:nth-of-type(2) {
+        top: -125%;
+        left: -35%;
+      }
+    }
+  }
+}

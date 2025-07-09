@@ -29,7 +29,11 @@ const advatages = [
 export default function Home() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      scrollAnimations();
+      const timeout = setTimeout(() => {
+        scrollAnimations();
+      }, 1000);
+
+      return () => clearTimeout(timeout);
     }
   }, []);
 
@@ -51,9 +55,7 @@ export default function Home() {
                 <h2 className="font-[700] text-[6vw] uppercase">
                   {text.title}
                 </h2>
-                <div
-                  className="font-[400] tracking-[-0.02em] pointer-events-none text-[1.3vw] _1600:leading-[1.5]"
-                >
+                <div className="font-[400] tracking-[-0.02em] pointer-events-none text-[1.3vw] _1600:leading-[1.5]">
                   <p className="w-[40vw]">{text.paragraph}</p>
                 </div>
               </div>
