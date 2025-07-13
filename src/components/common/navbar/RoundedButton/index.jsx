@@ -18,11 +18,11 @@ export default function index({ menu, setIsActive, isActive, ...attributes }) {
         </div>
       </div>
       <div
-        className={`relative bg-transparent rounded-[50%] z-[1] ${
+        className={`relative rounded-[50%] z-[1] ${
           menu ? "w-[80px] h-[80px]" : "w-[50px] h-[50px]"
         }
-                    after:content-[''] after:top-1/2 after:translate-y-[calc(-50%-5px)] after:block after:h-[1px] after:w-[40%] after:m-auto after:bg-white after:relative after:transition-[transform_0.3s]
-                    before:content-[''] before:top-1/2 before:translate-y-[calc(-50%+5px)] before:block before:h-[1px] before:w-[40%] before:m-auto before:bg-white before:relative before:transition-[transform_0.3s] 
+          after:content-[''] after:top-1/2 after:translate-y-[calc(-50%-5px)] after:block after:h-[0.5px] after:w-[40%] after:m-auto after:!bg-white after:relative after:transition-[transform_0.3s]
+          before:content-[''] before:top-1/2 before:translate-y-[calc(-50%+5px)] before:block before:h-[1px] before:w-[40%] before:m-auto before:!bg-white before:relative before:transition-[transform_0.3s] 
                     ${
                       isActive
                         ? "after:!translate-y-[calc(-50%-2px)] after:rotate-45 before:!translate-y-[calc(-50%+0px)] before:-rotate-45"

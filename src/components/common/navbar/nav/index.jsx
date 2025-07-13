@@ -16,10 +16,10 @@ export default function index({ setIsActive, isActive }) {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="h-screen bg-[rgb(41,41,41)] fixed right-0 top-0 text-white z-[999] min-w-[30%]"
+      className="h-screen bg-[rgb(41,41,41)] fixed right-0 top-0 text-white z-[999] min-w-[30%] max-_1600:min-w-[35%]"
     >
       <div className="box-border h-full p-[100px] flex flex-col">
-        <ul className="flex flex-col gap-3 mt-[70px]">
+        <ul className="flex flex-col gap-3 mt-[70px] max-_1600:mt-[40px]">
           {links.map((item, index) => (
             <Link
               href={`/${
@@ -28,13 +28,14 @@ export default function index({ setIsActive, isActive }) {
               key={index}
               className="w-fit"
             >
-              <li className="line_hover_effect first-letter:capitalize before:!bg-white font-[500] text-[45px] cursor-pointer">
+              <li className="line_hover_effect first-letter:capitalize before:!bg-white font-[500] text-[45px] cursor-pointer
+              max-_1600:text-[2.5vw]">
                 {item.link}
               </li>
             </Link>
           ))}
         </ul>
-        <div className="absolute bottom-4 left-0 px-6 w-full flex justify-between">
+        <div className="absolute bottom-4 left-0 px-6 w-full flex justify-between text-lg max-_1600:text-base">
           <ul className="flex flex-col gap-2">
             {contactInfo.map(
               ({ type, values }) =>
@@ -44,7 +45,7 @@ export default function index({ setIsActive, isActive }) {
                     <Link
                       key={idx}
                       href={item.href}
-                      className="line_hover_effect before:!bg-white text-lg"
+                      className="line_hover_effect before:!bg-white"
                     >
                       {item.label}
                     </Link>
@@ -61,7 +62,7 @@ export default function index({ setIsActive, isActive }) {
                     <Link
                       key={idx}
                       href={item.href}
-                      className="line_hover_effect before:!bg-white text-lg"
+                      className="line_hover_effect before:!bg-white"
                     >
                       {item.label}
                     </Link>

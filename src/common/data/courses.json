@@ -3,18 +3,64 @@
     "course": "business",
     "title": "Business from 0",
     "description": "Build your business from 0 — Find a problem, create a solution, and pitch your idea to investors.",
-    "color": "#1FBDAF"
+    "guide": [
+      {
+        "title": "Introduction",
+        "content": ["1", "2"]
+      },
+      {
+        "title": "Financial literacy",
+        "content": [
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ]
+      },
+      {
+        "title": "Business law",
+        "content": ["17", "18", "19", "20", "21", "22", "23", "24"]
+      },
+      {
+        "title": "Business literacy",
+        "content": [
+          "25",
+          "26",
+          "27",
+          "28",
+          "29",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35"
+        ]
+      },
+      {
+        "title": "Presentation skills",
+        "content": ["36", "37", "38", "39", "40", "41", "42", "43"]
+      }
+    ]
   },
   {
     "course": "rights",
     "title": "Path to Law",
-    "description": "Explore legal systems, debate real cases, and understand how laws shape society and protect rights.",
-    "color": "#F36967"
+    "description": "Explore legal systems, debate real cases, and understand how laws shape society and protect rights."
   },
   {
     "course": "marketing",
     "title": "Marketing",
-    "description": "Learn how to brand, target audiences, and create impactful campaigns using digital tools and creativity.",
-    "color": "#FED501"
+    "description": "Learn how to brand, target audiences, and create impactful campaigns using digital tools and creativity."
   }
 ]

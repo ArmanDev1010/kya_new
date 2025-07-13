@@ -103,16 +103,16 @@ export default function index({ mouseMoveCor, course, is_course }) {
   const animate = () => {
     xForce = lerp(xForce, 0, easing);
     yForce = lerp(yForce, 0, easing);
-    gsap.set(plane1.current, { x: `+=${xForce}`, y: `+=${yForce}` });
-    gsap.set(plane2.current, {
+    gsap.set(plane1?.current, { x: `+=${xForce}`, y: `+=${yForce}` });
+    gsap.set(plane2?.current, {
       x: `+=${xForce * 0.5}`,
       y: `+=${yForce * 0.5}`,
     });
-    gsap.set(plane3.current, {
+    gsap.set(plane3?.current, {
       x: `+=${xForce * 0.25}`,
       y: `+=${yForce * 0.25}`,
     });
-    gsap.set(plane4.current, {
+    gsap.set(plane4?.current, {
       x: `+=${xForce * 0.7}`,
       y: `+=${yForce * 0.7}`,
     });

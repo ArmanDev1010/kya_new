@@ -1,6 +1,6 @@
 import Hero from "../../../components/Course/hero";
 import Cards from "../../../components/Course/cards";
-
+import Details from "../../../components/Course/guide";
 import courseData from "../../../common/data/courses.json";
 
 export async function generateStaticParams() {
@@ -20,11 +20,12 @@ export default async function Course({ params }) {
     );
   }
 
-  const { title, description } = courseInfo;
+  const { title, description, guide } = courseInfo;
 
   return (
     <div className="relative">
       <Hero course={course} title={title} description={description} />
+      <Details guide={guide} />
       <Cards course={course} />
     </div>
   );
