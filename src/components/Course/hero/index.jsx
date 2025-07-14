@@ -7,7 +7,7 @@ import Planes from "../../common/Planes";
 
 import SlidingYImages from "./SlidingYImages";
 
-export default function index({ course, title, description }) {
+export default function index({ course, title, description, planes }) {
   const [mouseMoveCor, setMouseMoveCor] = useState(0);
 
   return (
@@ -17,11 +17,15 @@ export default function index({ course, title, description }) {
         setMouseMoveCor(e);
       }}
     >
-      <div className="relative px-[1%] mb-10">
+      <div className="relative px-[1%] mb-16">
         <h1 className="font-[500] max-_1600:font-[400]">
           <TextFill title={title} />
         </h1>
-        <Planes mouseMoveCor={mouseMoveCor} course={course} is_course={true} />
+        <Planes
+          mouseMoveCor={mouseMoveCor}
+          is_course={true}
+          planes_text={planes}
+        />
       </div>
       <div className="flex justify-center text-center mb-12">
         <div className="max-w-[850px]">

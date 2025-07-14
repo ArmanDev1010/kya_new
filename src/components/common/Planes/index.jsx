@@ -2,32 +2,12 @@ import React, { useEffect } from "react";
 import { useRef } from "react";
 import gsap from "gsap";
 
-const coursePlaneTexts = {
-  business: [
-    "Business skills",
-    "Financial literacy",
-    "Soft skills",
-    "7 – 17 year olds",
-  ],
-  rights: [
-    "Legal protection",
-    "Practical skills",
-    "Critical thinking",
-    "10 – 18 year olds",
-  ],
-  marketing: [
-    "Creative branding",
-    "Digital strategy",
-    "AI in marketing",
-    "12 – 18 year olds",
-  ],
-};
-
-export default function index({ mouseMoveCor, course, is_course }) {
+export default function index({ mouseMoveCor, is_course, planes_text }) {
   const plane1 = useRef(null);
   const plane2 = useRef(null);
   const plane3 = useRef(null);
   const plane4 = useRef(null);
+  const plane5 = useRef(null);
 
   const hero_planes = [
     {
@@ -65,21 +45,17 @@ export default function index({ mouseMoveCor, course, is_course }) {
     { plane: plane2, top: "2", right: "20", bg: "#1FBDAF" },
     { plane: plane3, top: "3", right: "60", bg: "#F36967" },
     { plane: plane4, top: "14", right: "85", bg: "#CBBEDC" },
+    { plane: plane5, top: "13", right: "45", bg: "#E97EFF" },
   ];
 
-  const course_planes = Object.entries(coursePlaneTexts).map(
-    ([courseKey, texts]) => ({
-      course: courseKey,
-      planes: baseCoursePlanes.map((base, i) => ({
-        ...base,
-        text: texts[i] || "",
-      })),
-    })
-  );
+  const course_planes =
+    is_course &&
+    baseCoursePlanes.map((planes, i) => ({
+      ...planes,
+      text: planes_text[i],
+    }));
 
-  const planes = is_course
-    ? course_planes.find((cp) => cp.course === course)?.planes || []
-    : hero_planes;
+  const planes = is_course ? course_planes : hero_planes;
 
   let requestAnimationFrameId = null;
   let xForce = 0;
@@ -103,19 +79,28 @@ export default function index({ mouseMoveCor, course, is_course }) {
   const animate = () => {
     xForce = lerp(xForce, 0, easing);
     yForce = lerp(yForce, 0, easing);
-    gsap.set(plane1?.current, { x: `+=${xForce}`, y: `+=${yForce}` });
-    gsap.set(plane2?.current, {
-      x: `+=${xForce * 0.5}`,
-      y: `+=${yForce * 0.5}`,
-    });
-    gsap.set(plane3?.current, {
-      x: `+=${xForce * 0.25}`,
-      y: `+=${yForce * 0.25}`,
-    });
-    gsap.set(plane4?.current, {
-      x: `+=${xForce * 0.7}`,
-      y: `+=${yForce * 0.7}`,
-    });
+    if (plane1.current)
+      gsap.set(plane1.current, { x: `+=${xForce}`, y: `+=${yForce}` });
+    if (plane2.current)
+      gsap.set(plane2.current, {
+        x: `+=${xForce * 0.5}`,
+        y: `+=${yForce * 0.5}`,
+      });
+    if (plane3.current)
+      gsap.set(plane3.current, {
+        x: `+=${xForce * 0.25}`,
+        y: `+=${yForce * 0.25}`,
+      });
+    if (plane4.current)
+      gsap.set(plane4.current, {
+        x: `+=${xForce * 0.7}`,
+        y: `+=${yForce * 0.7}`,
+      });
+    if (plane5.current)
+      gsap.set(plane5.current, {
+        x: `+=${xForce * 0.9}`,
+        y: `+=${yForce * 0.9}`,
+      });
 
     if (Math.abs(xForce) < 0.01) xForce = 0;
     if (Math.abs(yForce) < 0.01) yForce = 0;

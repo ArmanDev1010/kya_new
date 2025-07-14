@@ -73,7 +73,6 @@ export default function index({ course }) {
 }
 
 const Column = ({ images, y, course }) => {
-  console.log(images);
   return (
     <motion.div
       className="column relative h-full w-[33.3%] min-w-[250px] flex flex-col gap-[2vw] max-_550:min-w-[350px]"
@@ -90,6 +89,7 @@ const Column = ({ images, y, course }) => {
               <Image
                 src={`/assets/course/sliding_images/${course}/${text.src}.jpg`}
                 fill={true}
+                sizes="100%"
                 alt=""
                 className="w-full h-full object-cover bg-gray-200"
               />

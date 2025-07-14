@@ -8,7 +8,7 @@ export default function index({ guide }) {
         just learners. If you want your child to build the future — not just
         wait for it.
       </h2>
-      <p className="relative text-[2.7vw] uppercase pointer-events-none pb-2 w-full before:content-[''] before:absolute before:bg-gray-300 before:w-full before:h-[0.05rem] before:bottom-0 before:left-0">
+      <p className="relative text-[2.7vw] uppercase pointer-events-none pb-2 w-full before:content-[''] before:absolute before:bg-[#e5e7eb] before:w-full before:h-[0.5px] before:bottom-0 before:left-0">
         Course Guide
       </p>
       <div className="relative grid grid-cols-[repeat(8,1fr)]">

@@ -20,13 +20,18 @@ export default async function Course({ params }) {
     );
   }
 
-  const { title, description, guide } = courseInfo;
+  const { title, description, guide, planes, cards } = courseInfo;
 
   return (
     <div className="relative">
-      <Hero course={course} title={title} description={description} />
+      <Hero
+        course={course}
+        title={title}
+        description={description}
+        planes={planes}
+      />
       <Details guide={guide} />
-      <Cards course={course} />
+      <Cards course={course} cards_={cards} />
     </div>
   );
 }

@@ -10,6 +10,7 @@ export default function index({ project }) {
         <Image
           src={`/assets/hero/${project.src}.JPG`}
           fill={true}
+          sizes="100%"
           alt=""
           className="object-cover"
         />
