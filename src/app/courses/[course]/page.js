@@ -1,6 +1,7 @@
 import Hero from "../../../components/Course/hero";
 import Cards from "../../../components/Course/cards";
 import Details from "../../../components/Course/guide";
+import Team from "../../../components/Course/trainers";
 import courseData from "../../../common/data/courses.json";
 
 export async function generateStaticParams() {
@@ -32,6 +33,7 @@ export default async function Course({ params }) {
       />
       <Details guide={guide} />
       <Cards course={course} cards_={cards} />
+      <Team course={course} />
     </div>
   );
 }

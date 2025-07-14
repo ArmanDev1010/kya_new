@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Lilit Vatoyan",
+    "role": "Founder",
+    "image": "lilit_founder",
+    "trainer": "business",
+    "order": 2
+  },
+  {
+    "name": "Garegin Xachatryan",
+    "role": "oparetions director",
+    "image": "garegin_director",
+    "trainer": "business",
+    "order": 3
+  },
+  {
+    "name": "Arman Minasyan",
+    "role": "business trainer",
+    "image": "arman_trainer",
+    "trainer": "business",
+    "order": 1
+  },
+  {
+    "name": "Samvel Jabaxyan",
+    "role": "law trainer",
+    "image": "samvel_trainer",
+    "trainer": "rights"
+  },
+  {
+    "name": "Susanna Mkhitaryan",
+    "role": "marketing trainer",
+    "image": "susanna_trainer",
+    "trainer": "marketing"
+  },
+  {
+    "name": "Arman Sargsyan",
+    "role": "psychologist / trainer",
+    "image": "armans_trainer"
+  },
+  { "name": "Lilit Hovsepyan", "role": "smm specialist", "image": "lilit_smm" },
+  {
+    "name": "Anahit Alaverdyan",
+    "role": "communication specialist",
+    "image": "anahit_communication"
+  },
+  { "name": "Mane Sargsyan", "role": "mood maker", "image": "mane_mood" }
+]

@@ -63,7 +63,10 @@ export default function index({ course, cards_ }) {
           <Card key={key} {...text} course={course} />
         ))}
       </div>
-      <div className="outro"></div>
+      <div
+        className="outro"
+        style={{ height: `${cards_?.length * 50}px` }}
+      ></div>
     </div>
   );
 }
