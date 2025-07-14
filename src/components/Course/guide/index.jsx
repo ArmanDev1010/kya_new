@@ -1,6 +1,10 @@
+"use client";
+
+import { useState } from "react";
 import Answer from "./answer";
 
 export default function index({ guide }) {
+  const [activeIndex, setActiveIndex] = useState(null);
   return (
     <div className="relative px-[3%] my-[2em]">
       <h2 className="text-[4vw] tracking-[-0.035em] leading-[1.02] indent-[24vw] mb-[7vw] pointer-events-none">
@@ -19,6 +23,8 @@ export default function index({ guide }) {
               index={key}
               title={text.title}
               content={text.content}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
             />
           ))}
         </ul>
