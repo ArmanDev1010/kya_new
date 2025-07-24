@@ -24,7 +24,7 @@ export default function index() {
             </p>
           </div>
           <Link
-            href={"/"}
+            href={"/leaderboard"}
             className="group mt-[1.5rem] font-[600] border-[1px] border-black rounded-full relative cursor-pointer overflow-hidden
             _1600:max-w-[320px] _1600:text-[1.1vw] _1600:py-4 _1280:max-w-[270px] _1280:text-[1.2vw] _1280:py-[14px]"
           >

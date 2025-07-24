@@ -18,7 +18,11 @@ export default function index({ course }) {
 
   return (
     <div className="relative px-[3%] mb-20">
-      <div className="grid grid-cols-[repeat(8,1fr)] gap-7 w-full border-t-[1px] pt-10">
+      <div
+        className={`grid grid-cols-[repeat(8,1fr)] w-full border-t-[1px] pt-10 ${
+          trainers.length <= 1 ? "gap-12" : "gap-7"
+        }`}
+      >
         <div className="[grid-column:1_/_span_3] pointer-events-none">
           <p className="text-[5vw] font-[500] leading-[1] mb-6">
             {trainers.length <= 1 ? "Our Trainer" : "Trainers"}
