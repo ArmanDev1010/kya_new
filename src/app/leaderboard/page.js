@@ -8,5 +8,10 @@ export default function LeaderboardPage() {
 
   if (loading) return <p>Loading...</p>;
 
-  return <LeaderboardLayout groups={groups} data={data} />;
+  return (
+    <>
+      <LeaderboardLayout groups={groups} data={data} />
+      <div className="absolute top-0 left-0 w-full h-screen bg-[linear-gradient(#fcf3c0,#ffff)]"></div>
+    </>
+  );
 }

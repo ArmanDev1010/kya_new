@@ -46,7 +46,7 @@ export default function Header() {
           scrollY <= 150 ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex items-center justify-between px-[3%] h-[120px] max-_1080:!px-[3%]">
+        <div className="flex items-center justify-between px-[3%] h-[110px] max-_1080:!px-[3%]">
           <Link href="/">
             <Image
               src={Black_Logo}

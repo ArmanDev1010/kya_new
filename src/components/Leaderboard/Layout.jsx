@@ -2,6 +2,10 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { motion } from "framer-motion";
+
+import coursesData from "@/common/data/courses.json";
+
 export default function LeaderboardLayout({ groups, data }) {
   const [activeCourse, setActiveCourse] = useState("");
   const [activeGroup, setActiveGroup] = useState("");
@@ -15,6 +19,13 @@ export default function LeaderboardLayout({ groups, data }) {
     });
     return Array.from(courseSet);
   }, [groups]);
+
+  const courseTitleMap = useMemo(() => {
+    return coursesData.reduce((acc, course) => {
+      acc[course.course.toLowerCase()] = course.title;
+      return acc;
+    }, {});
+  }, []);
 
   // Default active course
   useEffect(() => {
@@ -40,43 +51,56 @@ export default function LeaderboardLayout({ groups, data }) {
     : [];
 
   const sortedGroup = [...currentGroup].sort((a, b) => b.score - a.score);
-  const topThree = sortedGroup.slice(0, 3);
+  const topThree = [sortedGroup[1], sortedGroup[0], sortedGroup[2]];
   const others = sortedGroup.slice(3);
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Leaderboard</h1>
-
+    <div className="relative bg-white rounded-t-[50px] mx-[2%] z-[1] p-6">
       {/* Course Tabs */}
-      <div className="flex flex-wrap gap-2 mb-4">
-        {courses.map((course) => (
-          <button
-            key={course}
-            className={`px-4 py-2 rounded ${
-              activeCourse === course
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-black"
-            }`}
-            onClick={() => {
-              setActiveCourse(course);
-              const firstGroup = groups.find((g) => g.startsWith(course));
-              setActiveGroup(firstGroup);
-            }}
-          >
-            {course}
-          </button>
-        ))}
+      <div className="flex justify-center my-3">
+        <div className="bg-[#f4f4f4] p-2 rounded-full w-fit flex justify-center gap-x-6 mb-[2rem] relative">
+          {courses.map((course, key) => (
+            <button
+              key={course}
+              onClick={() => {
+                setActiveCourse(course);
+                const firstGroup = groups.find((g) => g.startsWith(course));
+                setActiveGroup(firstGroup);
+              }}
+              className="relative rounded-full px-3 py-1.5 text-lg font-medium max-tablet:text-lg"
+              style={{ WebkitTapHighlightColor: "transparent" }}
+            >
+              {activeCourse === course && (
+                <motion.span
+                  layoutId="bubble"
+                  className="absolute inset-0 z-10 bg-primary"
+                  style={{ borderRadius: 9999 }}
+                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                />
+              )}
+              <p
+                className={`${
+                  activeCourse === course
+                    ? "text-white"
+                    : "text-black hover:text-black/60 transition"
+                } relative z-[12] py-1 px-3`}
+              >
+                {courseTitleMap[course.toLowerCase()] || course}
+              </p>
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Group Tabs (filtered by course) */}
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex justify-center flex-wrap gap-4">
         {filteredGroups.map((group) => (
           <button
             key={group}
             className={`px-4 py-2 rounded ${
               activeGroup === group
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200 text-black"
+                ? "bg-primary text-white"
+                : "bg-[#f4f4f4] text-black"
             }`}
             onClick={() => setActiveGroup(group)}
           >
@@ -86,32 +110,73 @@ export default function LeaderboardLayout({ groups, data }) {
       </div>
 
       {/* Top 3 */}
-      <div className="mb-8">
-        <h2 className="text-xl font-semibold mb-2">Top 3</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {topThree.map((entry, i) => (
-            <div key={i} className="bg-yellow-100 p-4 rounded shadow">
-              <h3 className="font-bold">{entry.name}</h3>
-              <p>Score: {entry.score}</p>
-              <p>Gender: {entry.gender}</p>
-            </div>
-          ))}
+      <div>
+        <div
+          className="relative aspect-[60/31] w-full top-0 left-1/2 -translate-x-1/2 bg-cover bg-center bg-no-repeat flex flex-col justify-center"
+          style={{
+            backgroundImage: `url(/assets/leaderboard/leaderboard_numbers.png)`,
+          }}
+        >
+          <div className="flex justify-around items-center text-center mb-[100px] pointer-events-none">
+            {topThree.map((entry, i) => {
+              let marginTop;
+              if (i === 0) marginTop = "150px";
+              else if (i === 1) marginTop = "0px";
+              else if (i === 2) marginTop = "200px";
+
+              const isFirstPlace = i === 1;
+              const base = entry?.gender === "m" ? "boy" : "girl";
+              const imageName = isFirstPlace ? `${base}_crown` : base;
+
+              return (
+                <div
+                  key={i}
+                  className="flex flex-col items-center"
+                  style={{ marginTop }}
+                >
+                  <div
+                    className="relative w-[120px] h-[120px] bg-contain bg-center bg-no-repeat rounded-full"
+                    style={{
+                      backgroundImage: `url(/assets/leaderboard/${imageName}.png)`,
+                    }}
+                  >
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-gray-100 w-[110px] h-[110px] rounded-full z-[-1]"></div>
+                  </div>
+                  <h3 className="text-3xl mt-5 font-[500]">{entry?.name}</h3>
+                  <p className="mt-3 text-xl">{entry?.score} Points</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
 
       {/* Others */}
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Others</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {others.map((entry, i) => (
-            <div key={i} className="bg-white p-4 rounded shadow">
-              <h3 className="font-bold">{entry.name}</h3>
-              <p>Score: {entry.score}</p>
-              <p>Gender: {entry.gender}</p>
+      {others.length > 0 && (
+        <div className="pointer-events-none">
+          <div className="bg-[#f4f4f4] rounded-[50px] w-full flex justify-between text-base text-gray-500 font-[400] px-[3%] py-3 pointer-events-none">
+            <div className="flex gap-[5rem]">
+              <p className="w-[100px]">Position</p>
+              <p>Name</p>
             </div>
-          ))}
+            <p>Points</p>
+          </div>
+          <ul className="">
+            {others.map((entry, i) => (
+              <li
+                key={i}
+                className="flex justify-between text-lg bg-white px-[3%] py-5 border-b-[1px] last:border-b-0"
+              >
+                <div className="flex gap-[5rem]">
+                  <p className="w-[100px]">{i + 4}</p>
+                  <h3 className="font-[500]">{entry?.name}</h3>
+                </div>
+                <p>{entry?.score}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      )}
     </div>
   );
 }
