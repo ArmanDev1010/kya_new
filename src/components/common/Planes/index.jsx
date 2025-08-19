@@ -1,13 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useRef } from "react";
 import gsap from "gsap";
 
-export default function index({ mouseMoveCor, is_course, planes_text }) {
+export default function index({
+  mouseMoveCor,
+  is_course,
+  planes_text,
+  is_courses,
+}) {
   const plane1 = useRef(null);
   const plane2 = useRef(null);
   const plane3 = useRef(null);
   const plane4 = useRef(null);
   const plane5 = useRef(null);
+
+  const randomValue = (max, min = 0) =>
+    Math.floor(Math.random() * (max - min + 1)) + min;
 
   const hero_planes = [
     {
@@ -40,22 +48,57 @@ export default function index({ mouseMoveCor, is_course, planes_text }) {
     },
   ];
 
-  const baseCoursePlanes = [
+  const coursePlanes = [
     { plane: plane1, top: "12", right: "13", bg: "#FED501" },
     { plane: plane2, top: "2", right: "20", bg: "#1FBDAF" },
     { plane: plane3, top: "3", right: "60", bg: "#F36967" },
     { plane: plane4, top: "14", right: "85", bg: "#CBBEDC" },
-    { plane: plane5, top: "13", right: "45", bg: "#E97EFF" },
+    { plane: plane5, top: "13", right: "45", bg: "#63C8FF" },
   ];
+
+  const coursesPlanes = useMemo(
+    () => [
+      {
+        plane: plane1,
+        top: randomValue(15),
+        right: randomValue(90),
+        bg: "#FED501",
+      },
+      {
+        plane: plane2,
+        top: randomValue(15),
+        right: randomValue(90),
+        bg: "#1FBDAF",
+      },
+      {
+        plane: plane3,
+        top: randomValue(15),
+        right: randomValue(90),
+        bg: "#F36967",
+      },
+    ],
+    []
+  );
 
   const course_planes =
     is_course &&
-    baseCoursePlanes.map((planes, i) => ({
+    coursePlanes.map((planes, i) => ({
       ...planes,
       text: planes_text[i],
     }));
 
-  const planes = is_course ? course_planes : hero_planes;
+  const courses_planes =
+    is_courses &&
+    coursesPlanes.map((planes, i) => ({
+      ...planes,
+      text: planes_text[i],
+    }));
+
+  const planes = is_course
+    ? course_planes
+    : is_courses
+    ? courses_planes
+    : hero_planes;
 
   let requestAnimationFrameId = null;
   let xForce = 0;

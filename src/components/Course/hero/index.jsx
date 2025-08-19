@@ -32,10 +32,10 @@ export default function index({ course, title, description, planes }) {
           <p className="text-[1.8vw] pointer-events-none mb-[40px] max-_1600:mb-8">
             {description}
           </p>
-          <button className="group capitalize relative bg-primary inline-block px-36 py-5 overflow-hidden max-_1600:py-4 max-_1600:px-32">
+          <button className="group capitalize relative bg-primary inline-block px-32 py-5 overflow-hidden max-_1600:py-4 max-_1600:px-28">
             <div className="relative overflow-hidden text-white font-semibold z-10 _1600:text-[26px] _1280:text-xl">
               <div className="group-hover:translate-y-[-110%] transition duration-300">
-                Sign up to a Free Class
+                Sign up
               </div>
               <div className="text-black translate-y-[110%] group-hover:translate-y-[0%] transition duration-300 absolute top-0 bottom-0 left-0 right-0">
                 Sign up
